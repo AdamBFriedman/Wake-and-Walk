@@ -1,4 +1,4 @@
-import logo from "../src/images/logo.png";
+// import logo from "../src/images/logo.png";
 import "./App.css";
 import Trails from "./components/Trails/Trails";
 

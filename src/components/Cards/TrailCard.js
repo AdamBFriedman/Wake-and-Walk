@@ -42,6 +42,10 @@ const useStyles = makeStyles((theme) =>
 export default function TrailCard() {
   const classes = useStyles();
 
+  const handleButtonClick = () => {
+    alert("Soon, this button will do something :)");
+  };
+
   return (
     <Card className={classes.businessContentCard} data-testid="businessCard">
       <Box
@@ -64,10 +68,11 @@ export default function TrailCard() {
 
       <Divider />
 
-      <CardActionArea className={classes.cardActions}>
-        <Box display="flex" justifyContent="center" alignItems="center">
-          Button
-        </Box>
+      <CardActionArea
+        className={classes.cardActions}
+        onClick={handleButtonClick}
+      >
+        Button
       </CardActionArea>
     </Card>
   );
