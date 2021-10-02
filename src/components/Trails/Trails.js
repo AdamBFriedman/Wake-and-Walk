@@ -28,7 +28,7 @@ export default function Trails() {
   return (
     <>
       <Typography component={"h2"} variant={"h2"}>
-        Trails
+        The Trails
       </Typography>
       <Box className={classes.trailWrapper}>
         {trails.map((trail) => (
