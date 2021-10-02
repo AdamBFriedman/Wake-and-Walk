@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) =>
   createStyles({
     businessContentCard: {
       color: theme.palette.primary.main,
-      width: 340,
+      minWidth: 340,
       margin: theme.spacing(1),
       [theme.breakpoints.down("xs")]: {
         width: "100%",
@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) =>
   })
 );
 
-export default function TrailCard() {
+export default function TrailCard({ title, description }) {
   const classes = useStyles();
 
   const handleButtonClick = () => {
@@ -55,14 +55,14 @@ export default function TrailCard() {
         padding={2}
         bgcolor={"lightgrey"}
       >
-        Trail Title
+        {title}
       </Box>
 
       <CardContent className={classes.cardContent}>
         <Box className={classes.image}>Image</Box>
 
         <Typography variant="body1" component="p">
-          Description
+          {description}
         </Typography>
       </CardContent>
 
