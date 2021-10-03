@@ -31,15 +31,10 @@ const useStyles = makeStyles((theme) =>
       alignItems: "center",
       justifyContent: "center",
     },
-    image: {
-      width: "100",
-      height: 250,
-      border: "1px solid blue",
-    },
   })
 );
 
-export default function TrailCard({ title, description }) {
+export default function TrailCard({ title, description, imageSrc }) {
   const classes = useStyles();
 
   const handleButtonClick = () => {
@@ -59,7 +54,7 @@ export default function TrailCard({ title, description }) {
       </Box>
 
       <CardContent className={classes.cardContent}>
-        <Box className={classes.image}>Image</Box>
+        <img width={250} alt={title} src={imageSrc} />
 
         <Typography variant="body1" component="p">
           {description}
