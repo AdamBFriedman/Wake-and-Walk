@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) =>
   createStyles({
     trailsWrapper: {
       backgroundColor: "#112152",
-      height: "100vh",
+      minHeight: "100vh",
     },
     trailWrapper: {
       display: "flex",
