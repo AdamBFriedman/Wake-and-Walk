@@ -11,12 +11,27 @@ import Trail7 from "../../images/trail7.png";
 
 import { createStyles, makeStyles } from "@material-ui/core/styles";
 
+/* Color Palette: 
+#070625 // Black
+#112152 // Blue
+#999a9e // Grey
+#fae12c // Yellow
+#f5f5f5 // Light Grey
+*/
+
 const useStyles = makeStyles((theme) =>
   createStyles({
+    trailsWrapper: {
+      backgroundColor: "#112152",
+      height: "100vh",
+    },
     trailWrapper: {
       display: "flex",
       flexWrap: "wrap",
       justifyContent: "center",
+    },
+    title: {
+      color: "#f5f5f5",
     },
   })
 );
@@ -27,49 +42,49 @@ export default function Trails() {
     {
       id: 1,
       title: "Trail 1",
-      description: "Description about Trail 1...",
+      length: 1.4,
       imageSrc: Trail,
     },
     {
       id: 2,
       title: "Trail 2",
-      description: "Description about Trail 2...",
+      length: 2.3,
       imageSrc: Trail2,
     },
     {
       id: 3,
       title: "Trail 3",
-      description: "Description about Trail 3...",
+      length: 3.7,
       imageSrc: Trail3,
     },
     {
       id: 4,
       title: "Trail 4",
-      description: "Description about Trail 4...",
+      length: 1.6,
       imageSrc: Trail4,
     },
     {
       id: 5,
       title: "Trail 5",
-      description: "Description about Trail 5...",
+      length: 1.5,
       imageSrc: Trail5,
     },
     {
       id: 6,
       title: "Trail 6",
-      description: "Description about Trail 6...",
+      length: 2.1,
       imageSrc: Trail6,
     },
     {
       id: 7,
       title: "Trail 7",
-      description: "Description about Trail 7...",
+      length: 5.2,
       imageSrc: Trail7,
     },
   ];
   return (
-    <>
-      <Typography component={"h2"} variant={"h2"}>
+    <div className={classes.trailsWrapper}>
+      <Typography component={"h2"} variant={"h2"} className={classes.title}>
         The Trails
       </Typography>
 
@@ -78,11 +93,11 @@ export default function Trails() {
           <TrailCard
             key={trail.id}
             title={trail.title}
-            description={trail.description}
+            length={trail.length}
             imageSrc={trail.imageSrc}
           />
         ))}
       </Box>
-    </>
+    </div>
   );
 }
