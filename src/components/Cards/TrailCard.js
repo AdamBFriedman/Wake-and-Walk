@@ -57,7 +57,7 @@ export default function TrailCard({ title, length, imageSrc }) {
       </Box>
 
       <CardContent className={classes.cardContent}>
-        <img width={250} alt={title} src={imageSrc} />
+        <img width={250} height={250} alt={title} src={imageSrc} />
 
         <Typography variant="body2" component="p" className={classes.length}>
           <strong>Length:</strong> {length} miles

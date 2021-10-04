@@ -8,6 +8,7 @@ import Trail4 from "../../images/trail4.png";
 import Trail5 from "../../images/trail5.png";
 import Trail6 from "../../images/trail6.png";
 import Trail7 from "../../images/trail7.png";
+import Trail8 from "../../images/trail8.png";
 
 import { createStyles, makeStyles } from "@material-ui/core/styles";
 
@@ -80,6 +81,12 @@ export default function Trails() {
       title: "Trail 7",
       length: 5.2,
       imageSrc: Trail7,
+    },
+    {
+      id: 8,
+      title: "Trail 8",
+      length: 4.2,
+      imageSrc: Trail8,
     },
   ];
   return (
