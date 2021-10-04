@@ -31,10 +31,13 @@ const useStyles = makeStyles((theme) =>
       alignItems: "center",
       justifyContent: "center",
     },
+    length: {
+      color: "#112152",
+    },
   })
 );
 
-export default function TrailCard({ title, description, imageSrc }) {
+export default function TrailCard({ title, length, imageSrc }) {
   const classes = useStyles();
 
   const handleButtonClick = () => {
@@ -56,8 +59,8 @@ export default function TrailCard({ title, description, imageSrc }) {
       <CardContent className={classes.cardContent}>
         <img width={250} alt={title} src={imageSrc} />
 
-        <Typography variant="body1" component="p">
-          {description}
+        <Typography variant="body2" component="p" className={classes.length}>
+          <strong>Length:</strong> {length} miles
         </Typography>
       </CardContent>
 
